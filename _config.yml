@@ -4,7 +4,7 @@
 # THEME. Leave Lines 4-6 alone.
 #---------------------
 remote_theme: kalanicraig/community-archive-jekyll
-repository: 'idahatiu/idahatiu.github.io' # change this to your repository name
+repository: 'mdlandini/sandbox' # change this to your repository name
 
 ##############################################
 # WHAT IS ALL THIS STUFF?
@@ -79,23 +79,23 @@ google_g4_analytics_id:
 # You can see these font choices in action at https://community-archive.kalanicraig.com/docs/
 # Uncomment the line for the font you like. Comment out all of the other lines.
 
-#fontchoice: archivonarrow # A narrow sans-serif font for headlines and body text
+fontchoice: archivonarrow # A narrow sans-serif font for headlines and body text
 #fontchoice: baloo # A clean sans-serif font with a playful rounded sans-serif accent
 #fontchoice: quattrocento # A modern sans-serif font with classic serif accents
 #fontchoice: raleway # An elegant sans-serif font with bold sans-serif accents
 #fontchoice: roboto # A clean sans-serif font with simple serif accents
-fontchoice: slab # A funky slab font with clean sans-serif accents
+#fontchoice: slab # A funky slab font with clean sans-serif accents
 #fontchoice: source # A modern serif font with clean sans-serif accents
 
 # Choose the COLORS you'd like to use.
 # You can see these color choices in action at https://community-archive.kalanicraig.com/docs/
 # Uncomment the line for the color you like. Comment out all of the other lines.
 
-#colorchoice: navy # Navy with bright teal and grey
+colorchoice: navy # Navy with bright teal and grey
 #colorchoice: leafgreen # Leafy green and medium brown
 #colorchoice: tan # Tan and deep brown with flame-bright orange
 #colorchoice: teal # Bright teal with bright orange-yellow accents
-colorchoice: marigold # Near-black with marigold yellow
+#colorchoice: marigold # Near-black with marigold yellow
 #colorchoice: red # Black, crimson and grey
 #colorchoice: lavenderred # Purple-grey with orange-red
 #colorchoice: dusk # Dusky purple and olive green
@@ -139,7 +139,7 @@ collections:
 # This URL is the main address for absolute links. This will usually be blank.
 url: 
 # If this archive will be in a folder (kalanicraig.com/community-archive/) instead of in its own main site (idahatiu.github.io) add that folder name here. This will usually be blank.
-baseurl: 
+baseurl: /sandbox/
 
 # This URL points directly to the images directory. It needs a slash at the end.
 #
