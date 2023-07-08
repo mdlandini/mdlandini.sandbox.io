@@ -1,16 +1,21 @@
 # Site navigation links
 
-- title: Our Community
+- title: Why Dairy Farms?
   url: /
   excerpt:
   image:
 
-- title: Our Collection
+- title: View the Collection
   url: /collection
   excerpt:
   image:
 
-- title: Our Stories
+- title: Farmer Stories
   url: /stories
+  excerpt:
+  image:
+
+- title: About the Project
+  url: /about
   excerpt:
   image:
