@@ -1,41 +1,28 @@
 # Site navigation links
 
-<<<<<<< HEAD
-- title: Why Local Dairy Farms?
-=======
 - title: Why Dairy Farms?
->>>>>>> 95da97621e3df15b2b7dc4a1558963aa094bf3c9
   url: /
   excerpt:
   image:
 
-<<<<<<< HEAD
+
 - title: Maps
   url: /maps
   excerpt:
   image:
 
 - title: Their Stories
-=======
-- title: View the Collection
   url: /collection
   excerpt:
   image:
 
 - title: Farmer Stories
->>>>>>> 95da97621e3df15b2b7dc4a1558963aa094bf3c9
   url: /stories
   excerpt:
   image:
 
-<<<<<<< HEAD
+
 - title: About This Project
   url: /about
   excerpt:
   image:
-=======
-- title: About the Project
-  url: /about
-  excerpt:
-  image:
->>>>>>> 95da97621e3df15b2b7dc4a1558963aa094bf3c9
