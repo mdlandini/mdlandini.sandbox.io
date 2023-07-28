@@ -5,12 +5,6 @@
   excerpt:
   image:
 
-
-- title: Maps
-  url: /maps
-  excerpt:
-  image:
-
 - title: Their Stories
   url: /collection
   excerpt:
@@ -20,7 +14,6 @@
   url: /stories
   excerpt:
   image:
-
 
 - title: About This Project
   url: /about
