@@ -1,6 +1,6 @@
 ---
-layout: test layout
-format: test format
+layout: item
+format: photo
 title: test title
 creator: "test creator"
 creator_1: 
