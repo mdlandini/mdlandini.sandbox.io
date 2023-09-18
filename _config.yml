@@ -114,7 +114,7 @@ colorchoice: leafgreen # Leafy green and medium brown
 # If you don't wish to display any metadata to the user, comment out both lines.
 
 #metadatadisplay: full # Display all public-facing metadata for each item page.
-metadatadisplay: core # Display only essential metadata for each item page, including title, contributor, creator, and creation date.
+#metadatadisplay: core # Display only essential metadata for each item page, including title, contributor, creator, and creation date.
 
 ##############################################
 # ORGANIZING YOUR COLLECTION
