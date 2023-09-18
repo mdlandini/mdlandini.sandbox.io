@@ -55,7 +55,7 @@ format: item
 {% endfor %}
 
 
-<div class="element-set">
+<!-- <div class="element-set">
 <h2 id="Dublin Core">More about this item</h2>
 <p class="quiet">Dublin Core</p>
 <table class="stack">
@@ -65,7 +65,43 @@ format: item
 <tr><td><div id="dublin-core-contributor" class="element">Contributor</div></td><td><div class="element-text">{{ page.contributor }}</div></td></tr>
 <tr><td><div id="dublin-core-date" class="element">Creation Date</div></td><td><div class="element-text">{{ page.creationdate }}</div></td></tr>
 </table>
-</div>
+</div> -->
+
+<!-- Gives the option for all or partial metadata display-->
+<!-- {% if site.metadatadisplay == "full" or site.metadatadisplay == "core" %}
+	<div class="element-set">
+	<h2 id="Dublin Core">More about this item</h2>
+	<p class="quiet">Dublin Core</p>
+	<table class="stack">
+	{% if site.metadatadisplay == "full" %}
+		{% include _metadatadisplayfull.html %} 
+	{% elsif site.metadatadisplay == "core" %}
+		{% include _metadatadisplaycore.html %}
+	{% endif %}
+	</table>
+	</div>
+{% endif %}
+-->
+
+{% if site.metadatadisplay == "core" %}
+	<div class="element-set">
+	<h2 id="Dublin Core">More about this item</h2>
+	<p class="quiet">Dublin Core</p>
+	<table class="stack">
+	{% include _metadatadisplaycore.html %}
+	</table>
+	</div>
+{% endif %}
+
+{% if site.metadatadisplay == "full" %}
+	<div class="element-set">
+	<h2 id="Dublin Core">More about this item</h2>
+	<p class="quiet">Dublin Core</p>
+	<table class="stack">
+	{% include _metadatadisplayfull.html %}
+	</table>
+	</div>
+{% endif %}
 
 <!-- {: .my-class } -->  
 
