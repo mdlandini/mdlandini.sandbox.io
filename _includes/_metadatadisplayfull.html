@@ -1,0 +1,311 @@
+<tr>
+    <td>
+        <div id="dublin-core-title" class="element">
+            {% if site.data.metadata.title %} 
+                {{ site.data.metadata.title }} 
+            {% else %} 
+                Title
+            {% endif %}
+        </div>
+    </td>
+    
+    <td>
+        {% if page.externalurl %}
+            <a href="{{ page.externalurl }}" target="_blank">
+        {% endif %}
+        <div class="element-text">
+            {{ page.title }}
+        </div>
+        {% if page.url %}
+            </a>
+        {% endif %}
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div id="dublin-core-format" class="element">
+            {% if site.data.metadata.format %} 
+                {{ site.data.metadata.format }} 
+            {% else %} 
+                Format
+            {% endif %}
+        </div>
+    </td>
+    
+    <td>
+        <div class="element-text">
+            {{ page.format }}
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div id="dublin-core-description" class="element">
+            {% if site.data.metadata.shortdesc %} 
+                {{ site.data.metadata.values.shortdesc }} 
+            {% else %} 
+                Description
+            {% endif %}
+        </div>
+    </td>
+    
+    <td>
+        <div class="element-text">
+            {{ page.shortdesc }}
+        </div>
+    </td>
+</tr>
+
+{% if site.data.metadata.creator.creator_1 and site.data.metadata.creator.creator_2 %}
+    <tr>
+        <td>
+            <div id="dublin-core-creator" class="element">
+                {{ site.data.metadata.creator.creator_1 }}
+            </div>
+        </td>
+        
+        <td>
+            <div class="element-text">
+                {{page.creator.creator_1 }}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="dublin-core-creator" class="element">
+                {{ site.data.metadata.creator.creator_2 }}
+            </div>
+        </td>
+        
+        <td>
+            <div class="element-text">
+                {{page.creator.creator_2 }}
+            </div>
+        </td>
+    </tr>
+
+{% elsif site.data.metadata.creator.creator_1 %}
+    <tr>
+        <td>
+            <div id="dublin-core-creator" class="element">
+                {{ site.data.metadata.creator.creator_1 }}
+            </div>
+        </td>
+
+        <td>
+            <div class="element-text">
+                {{page.creator.creator_1 }}
+            </div>
+        </td>
+    </tr>
+
+{% else %}
+    <tr>
+        <td>
+            <div id="dublin-core-creator" class="element">
+                Creators
+            </div>
+        </td>
+        
+        <td>
+            <div class="element-text">
+                {% if page.creator.creator_1 and page.creator.creator_2 %} 
+                    {{page.creator.creator_1 }} and {{ page.creator.creator_2 }} 
+                {% else %} 
+                    {{ page.creator.creator_1 }} 
+                {% endif %}
+            </div>
+        </td>
+    </tr>
+
+{% endif %}
+
+<tr>
+    <td>
+        <div id="dublin-core-contributor" class="element">
+            {% if site.data.metadata.contributor %} 
+                {{ site.data.metadata.contributor }} 
+            {% else %} 
+                Contributor
+            {% endif %}
+        </div>
+    </td>
+    
+    <td>
+        <div class="element-text">
+            {{ page.contributor }}
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div id="dublin-core-date" class="element">
+            {% if site.data.metadata.creationdate %} 
+                {{ site.data.metadata.creationdate }} 
+            {% else %} 
+                Date
+            {% endif %}
+        </div>
+    </td>
+
+    <td>
+        <div class="element-text">
+            {{ page.creationdate }}
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div id="metadata-group" class="element">
+            {% if site.data.metadata.group %} 
+                {{ site.data.metadata.group }} 
+            {% else %} 
+                Group
+            {% endif %}
+        </div>
+    </td>
+    
+    <td>
+        <div class="element-text">
+            {{ page.group }}
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div id="categories" class="element">
+            {% if site.data.metadata.categories %} 
+                {{site.data.metadata.categories }} 
+            {% else %} 
+                Categories
+            {% endif %}
+        </div>
+    </td>
+    
+    <td>
+        <div class="element-text">
+            {{ page.categories | join: ", " }}
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div id="tags" class="element">
+            {% if site.data.metadata.tags %} 
+                {{ site.data.metadata.tags }} 
+            {% else %} 
+                Tags
+            {% endif %}
+        </div>
+    </td>
+
+    <td>
+        <div class="element-text">
+            {{ page.tags | join: ", "  }}
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div id="team-member" class="element">
+            {% if site.data.metadata.teammember %} 
+                {{ site.data.metadata.teammember }} 
+            {% else %} 
+                Curating Team Member
+            {% endif %}
+        </div>
+    </td>
+    
+    <td>
+        <div class="element-text">
+            {{ page.teammember }}
+        </div>
+    </td>
+</tr>
+
+{% if page.daterange.datestart and page.daterange.dateend %}
+    <tr>
+        <td>
+            <div id="date_range" class="element">
+                {% if site.data.metadata.daterange.datestart and site.data.metadata.daterange.dateend %} 
+                    {{ site.data.metadata.daterange.datestart }} to {{ site.data.metadata.daterange.dateend }} 
+                {% else %} 
+                    Starting Date to End Date
+                {% endif %}
+            </div>
+        </td>
+        
+        <td>
+            <div class="element-text">
+                {{ page.daterange.datestart }}-{{ page.daterange.dateend }}
+            </div>
+        </td>
+    </tr>
+{% endif %}
+
+{% if page.author %}
+    <tr>
+        <td>
+            <div id="author" class="element">
+                {% if site.data.metadata.author %} 
+                    {{ site.data.metadata.author }} 
+                {% else %} 
+                    Author
+                {% endif %}
+            </div>
+        </td>
+        
+        <td>
+            <div class="element-text">
+                {{ page.author }}
+            </div>
+        </td>
+    </tr>
+{% endif %}
+
+{% if page.embedurl %}
+    <tr>
+        <td>
+            <div id="embedurl" class="element">
+                {% if site.data.metadata.embedurl %} 
+                    {{ site.data.metadata.embedurl }} 
+                {% else %} 
+                    Embed Link
+                {% endif %}
+            </div>
+        </td>
+        
+        <td>
+            <div class="element-text">
+                {{ page.embedurl }}
+            </div>
+        </td>
+    </tr>
+{% endif %}
+
+{% if page.license %}
+    <tr>
+        <td>
+            <div id="license" class="element">
+                {% if site.data.metadata.license %} 
+                    {{ site.data.metadata.license }} 
+                {% else %} 
+                    License
+                {% endif %}
+            </div>
+        </td>
+        
+        <td>
+            <div class="element-text">
+                {{ page.license }}
+            </div>
+        </td>
+    </tr>
+{% endif %}
