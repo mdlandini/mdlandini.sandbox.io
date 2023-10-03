@@ -34,10 +34,8 @@ format: item
 
 <!-- {% if page.creator %}<h4>Originally created by {{ page.creator }}</h4>{% endif %} -->
 			
-{% if page.creator.creator_1 and page.creator.creator_2 %}
-			<h4>Originally created by {{ page.creator.creator_1 }} and {{ page.creator.creator_2 }}</h4>	
-{% elsif page.creator.creator_1 %}
-			<h4>Originally created by {{ page.creator.creator_1 }}</h4>
+{% if page.creator.creator_1 and page.creator.creator_2 %}<h4>Originally created by {{ page.creator.creator_1 }} and {{ page.creator.creator_2 }}</h4>	
+{% elsif page.creator.creator_1 %}<h4>Originally created by {{ page.creator.creator_1 }}</h4>
 {% endif %}
 <!-- {% elsif page.creator.creator_1 and page.creator.creator_2 %}<h4>Originally created {{ page.creator.creator_1 }} and {{ page.creator.creator_2 }}</h4> -->
 
